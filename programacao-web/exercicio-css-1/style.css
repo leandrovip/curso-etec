@@ -1,0 +1,18 @@
+td {
+  background-color: azure;
+}
+td:hover {
+  background-color: antiquewhite;
+}
+
+#table1 {
+  width: 50%;
+  border: 3px dashed #666;
+  background: greenyellow;
+}
+
+.tableRed {
+  width: 50%;
+  border: 3px dotted #666;
+  background: red;
+}
