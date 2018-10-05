@@ -1,4 +1,4 @@
-# Projeto ETEC Sports - etecsports.github.io
+# Projeto ETEC Sports
 Projeto desenvolvido como exercício do componente **Programação WEB - Prof. André Luiz**
 
 _Curso: Técnico em Desenvolvimento de Sistemas 2018/2019_
