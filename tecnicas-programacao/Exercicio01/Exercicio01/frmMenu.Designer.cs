@@ -33,6 +33,8 @@
             this.parOuÍmparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.áreaTrianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarMenorNumeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +53,9 @@
             // 
             this.exercíciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parOuÍmparToolStripMenuItem,
-            this.médiaToolStripMenuItem});
+            this.médiaToolStripMenuItem,
+            this.áreaTrianguloToolStripMenuItem,
+            this.mostrarMenorNumeroToolStripMenuItem});
             this.exercíciosToolStripMenuItem.Name = "exercíciosToolStripMenuItem";
             this.exercíciosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.exercíciosToolStripMenuItem.Text = "Exercícios";
@@ -77,6 +81,20 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // áreaTrianguloToolStripMenuItem
+            // 
+            this.áreaTrianguloToolStripMenuItem.Name = "áreaTrianguloToolStripMenuItem";
+            this.áreaTrianguloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.áreaTrianguloToolStripMenuItem.Text = "Área Triangulo";
+            this.áreaTrianguloToolStripMenuItem.Click += new System.EventHandler(this.áreaTrianguloToolStripMenuItem_Click);
+            // 
+            // mostrarMenorNumeroToolStripMenuItem
+            // 
+            this.mostrarMenorNumeroToolStripMenuItem.Name = "mostrarMenorNumeroToolStripMenuItem";
+            this.mostrarMenorNumeroToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.mostrarMenorNumeroToolStripMenuItem.Text = "Mostrar Menor Numero";
+            this.mostrarMenorNumeroToolStripMenuItem.Click += new System.EventHandler(this.mostrarMenorNumeroToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,5 +118,7 @@
         private System.Windows.Forms.ToolStripMenuItem parOuÍmparToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem médiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem áreaTrianguloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarMenorNumeroToolStripMenuItem;
     }
 }

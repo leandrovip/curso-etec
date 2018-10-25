@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Exercicio01
@@ -20,70 +21,71 @@ namespace Exercicio01
 
         private void InitializeComponent()
         {
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.btnResultado = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            //
+            txtNumero = new TextBox();
+            lblNumero = new Label();
+            btnResultado = new Button();
+            label1 = new Label();
+            SuspendLayout();
+            // 
             // txtNumero
-            //
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(12, 83);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(336, 23);
-            this.txtNumero.TabIndex = 0;
-            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //
+            // 
+            txtNumero.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNumero.Location = new Point(12, 83);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(336, 23);
+            txtNumero.TabIndex = 0;
+            txtNumero.TextAlign = HorizontalAlignment.Center;
+            // 
             // lblNumero
-            //
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblNumero.Location = new System.Drawing.Point(12, 61);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(216, 19);
-            this.lblNumero.TabIndex = 3;
-            this.lblNumero.Text = "Informe o número a ser verificado";
-            //
+            // 
+            lblNumero.AutoSize = true;
+            lblNumero.Font = new Font("Segoe UI", 10F);
+            lblNumero.Location = new Point(12, 61);
+            lblNumero.Name = "lblNumero";
+            lblNumero.Size = new Size(216, 19);
+            lblNumero.TabIndex = 3;
+            lblNumero.Text = "Informe o número a ser verificado";
+            // 
             // btnResultado
-            //
-            this.btnResultado.BackColor = System.Drawing.Color.LightGreen;
-            this.btnResultado.FlatAppearance.BorderSize = 0;
-            this.btnResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResultado.Location = new System.Drawing.Point(204, 169);
-            this.btnResultado.Name = "btnResultado";
-            this.btnResultado.Size = new System.Drawing.Size(144, 37);
-            this.btnResultado.TabIndex = 1;
-            this.btnResultado.Text = "Verificar";
-            this.btnResultado.UseVisualStyleBackColor = false;
-            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
-            //
+            // 
+            btnResultado.BackColor = Color.LightGreen;
+            btnResultado.FlatAppearance.BorderSize = 0;
+            btnResultado.FlatStyle = FlatStyle.Flat;
+            btnResultado.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnResultado.Location = new Point(204, 169);
+            btnResultado.Name = "btnResultado";
+            btnResultado.Size = new Size(144, 37);
+            btnResultado.TabIndex = 1;
+            btnResultado.Text = "Verificar";
+            btnResultado.UseVisualStyleBackColor = false;
+            btnResultado.Click += btnResultado_Click;
+            // 
             // label1
-            //
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(25, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Verificar se número é par ou ímpar";
-            //
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            label1.Location = new Point(25, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(306, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Verificar se número é par ou ímpar";
+            // 
             // frmExercicio01
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 218);
-            this.Controls.Add(this.btnResultado);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.txtNumero);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmExercicio01";
-            this.Text = "Exercício 01";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(360, 218);
+            Controls.Add(btnResultado);
+            Controls.Add(label1);
+            Controls.Add(lblNumero);
+            Controls.Add(txtNumero);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "frmExercicio01";
+            Text = "Exercício 01";
+            Load += frmExercicio01_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private void btnResultado_Click(object sender, EventArgs e)
@@ -102,22 +104,20 @@ namespace Exercicio01
                 return;
             }
 
-            int numero = numeroConvertido; /*Convert.ToInt32(txtNumero.Text);*/
-            int resultado = numero % 2;
+            var numero = numeroConvertido; /*Convert.ToInt32(txtNumero.Text);*/
+            var resultado = numero % 2;
 
             if (resultado == 0)
-            {
                 MessageBox.Show("O número é PAR", "Resultado", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-            }
             else
-            {
                 MessageBox.Show("O número é ÍMPAR", "Resultado", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-            }
 
             txtNumero.Focus();
             txtNumero.SelectAll();
         }
+
+        private void frmExercicio01_Load(object sender, EventArgs e) { }
     }
 }

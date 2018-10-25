@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmExercicio03.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExercicio03.Designer.cs">
+      <DependentUpon>frmExercicio03.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExercicio01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="frmExercicio02.Designer.cs">
       <DependentUpon>frmExercicio02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExercicio04.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExercicio04.Designer.cs">
+      <DependentUpon>frmExercicio04.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmExercicio02.resx">
       <DependentUpon>frmExercicio02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExercicio03.resx">
+      <DependentUpon>frmExercicio03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExercicio04.resx">
+      <DependentUpon>frmExercicio04.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>

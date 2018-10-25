@@ -26,5 +26,17 @@ namespace Exercicio01
         {
             Application.Exit();
         }
+
+        private void áreaTrianguloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmExercicio03();
+            form.ShowDialog();
+        }
+
+        private void mostrarMenorNumeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmExercicio04();
+            form.ShowDialog();
+        }
     }
 }
