@@ -32,9 +32,10 @@
             this.exercíciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parOuÍmparToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.áreaTrianguloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarMenorNumeroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaNadadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,8 @@
             this.parOuÍmparToolStripMenuItem,
             this.médiaToolStripMenuItem,
             this.áreaTrianguloToolStripMenuItem,
-            this.mostrarMenorNumeroToolStripMenuItem});
+            this.mostrarMenorNumeroToolStripMenuItem,
+            this.categoriaNadadorToolStripMenuItem});
             this.exercíciosToolStripMenuItem.Name = "exercíciosToolStripMenuItem";
             this.exercíciosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.exercíciosToolStripMenuItem.Text = "Exercícios";
@@ -63,28 +65,21 @@
             // parOuÍmparToolStripMenuItem
             // 
             this.parOuÍmparToolStripMenuItem.Name = "parOuÍmparToolStripMenuItem";
-            this.parOuÍmparToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.parOuÍmparToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.parOuÍmparToolStripMenuItem.Text = "Par ou Ímpar";
             this.parOuÍmparToolStripMenuItem.Click += new System.EventHandler(this.parOuÍmparToolStripMenuItem_Click);
             // 
             // médiaToolStripMenuItem
             // 
             this.médiaToolStripMenuItem.Name = "médiaToolStripMenuItem";
-            this.médiaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.médiaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.médiaToolStripMenuItem.Text = "Média";
             this.médiaToolStripMenuItem.Click += new System.EventHandler(this.médiaToolStripMenuItem_Click);
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // áreaTrianguloToolStripMenuItem
             // 
             this.áreaTrianguloToolStripMenuItem.Name = "áreaTrianguloToolStripMenuItem";
-            this.áreaTrianguloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.áreaTrianguloToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.áreaTrianguloToolStripMenuItem.Text = "Área Triangulo";
             this.áreaTrianguloToolStripMenuItem.Click += new System.EventHandler(this.áreaTrianguloToolStripMenuItem_Click);
             // 
@@ -94,6 +89,20 @@
             this.mostrarMenorNumeroToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.mostrarMenorNumeroToolStripMenuItem.Text = "Mostrar Menor Numero";
             this.mostrarMenorNumeroToolStripMenuItem.Click += new System.EventHandler(this.mostrarMenorNumeroToolStripMenuItem_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // categoriaNadadorToolStripMenuItem
+            // 
+            this.categoriaNadadorToolStripMenuItem.Name = "categoriaNadadorToolStripMenuItem";
+            this.categoriaNadadorToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.categoriaNadadorToolStripMenuItem.Text = "Categoria Nadador";
+            this.categoriaNadadorToolStripMenuItem.Click += new System.EventHandler(this.categoriaNadadorToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -120,5 +129,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem áreaTrianguloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarMenorNumeroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaNadadorToolStripMenuItem;
     }
 }

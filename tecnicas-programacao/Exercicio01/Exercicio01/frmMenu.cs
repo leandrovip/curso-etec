@@ -38,5 +38,11 @@ namespace Exercicio01
             var form = new frmExercicio04();
             form.ShowDialog();
         }
+
+        private void categoriaNadadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmExercicio05();
+            form.ShowDialog();
+        }
     }
 }
