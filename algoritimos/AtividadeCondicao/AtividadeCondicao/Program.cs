@@ -4,7 +4,7 @@ namespace AtividadeCondicao
 {
     /// <summary>
     /// Nome: Leandro dos Santos Ferreira
-    /// E-mail: oi@leandro.in
+    /// E-mail: oi@leandro.int
     /// </summary>
     internal class Program
     {

@@ -57,6 +57,7 @@
             this.txtResultado.Size = new System.Drawing.Size(337, 53);
             this.txtResultado.TabIndex = 0;
             this.txtResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtResultado.TextChanged += new System.EventHandler(this.txtResultado_TextChanged);
             // 
             // txt7
             // 

@@ -17,6 +17,7 @@ namespace Calculadora
         private void TextBox_Numero(object sender, EventArgs e)
         {
             txtResultado.Text += ((Button) sender).Text;
+            txtResultado.Focus();
         }
 
         private void TextBox_Operador(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace Calculadora
             operador = ((Button) sender).Text;
 
             txtResultado.Text = string.Empty;
+            txtResultado.Focus();
         }
 
         private void txtIgual_Click(object sender, EventArgs e)
@@ -63,6 +65,18 @@ namespace Calculadora
             valor1 = 0m;
             valor2 = 0m;
             txtResultado.Text = string.Empty;
+        }
+
+        private void txtResultado_TextChanged(object sender, EventArgs e)
+        {
+            var caracteres = "";
+
+            foreach (var item in txtResultado.Text.ToCharArray())
+                if (char.IsDigit(item))
+                    caracteres += item;
+
+            txtResultado.Text = caracteres;
+            txtResultado.SelectionStart = txtResultado.TextLength;
         }
     }
 }
