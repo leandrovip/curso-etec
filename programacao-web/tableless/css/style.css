@@ -1,0 +1,28 @@
+body {
+    padding: 0;
+    margin:0;
+}
+
+#topo a {
+    text-decoration: none;
+}
+
+#topo img {
+    width: 32px;
+    height: 32px;
+}
+
+#topo .logo {
+    width: 220px;
+    height: 150px;
+}
+
+#conteudo1 {
+    width: 200px;
+    float: left;
+}
+
+#conteudo2 {
+    float: left;
+    width: 600px;
+}
