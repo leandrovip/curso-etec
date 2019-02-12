@@ -1,4 +1,4 @@
-# curso-etec
+# Técnico em Desenvolvimento de Sistemas 2018/2019 (curso-etec)
 
 - Códigos e arquivos gerados durante as aulas do curso de Desenvolvimento de Sistemas
 
