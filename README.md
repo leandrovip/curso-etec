@@ -1,6 +1,6 @@
 # curso-etec
 
-- Códigos gerados durante aulas do curso Desenvolvimento de Sistemas
+- Códigos e arquivos gerados durante as aulas do curso de Desenvolvimento de Sistemas
 
 - Etec Prof. Idio Zucchi - Pólo Antônio Mazza (Viradouro/SP)
 
