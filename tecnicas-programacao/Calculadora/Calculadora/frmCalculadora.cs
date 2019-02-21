@@ -164,7 +164,7 @@ namespace Calculadora
                     break;
 
                 case "/":
-                    resultado -= valor2;
+                    resultado /= valor2;
                     break;
             }
 
