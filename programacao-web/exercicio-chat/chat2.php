@@ -15,17 +15,7 @@ if (isset($_SESSION["usuario"])) {
 
 <br />
 <br />
-<textarea name="conversa" id="conversa" cols="50" rows="10">
-<?php
-if (file_exists('teste.txt')) {
-    $file = fopen('teste.txt', 'r');
-    $content = fread($file, filesize('teste.txt'));
-    fclose($file);
-
-    echo $content;
-}
-?>
-</textarea>
+<iframe src="conversa.php" width="100%" height="200" frameborder="0"></iframe>
 
 <br />
 <br />
