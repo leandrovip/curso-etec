@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+
+    if(empty($_SESSION['usuario'])) {
+        header("Location: index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,6 +24,8 @@
 
 <body>
     <div id="menu" style="width: 960px; margin: auto; heigth: 55px; text-align:center">
+        <p>Olá <?php $_SESSION['usuario']?></p>
+
         <a href="?action=users">
             <img src="imgs/users.png" width="50" heigth="50">
         </a>
@@ -24,13 +34,15 @@
             <img src="imgs/book.png" width="50" heigth="50">
         </a>
 
-        <a href="?action=exit">
+        <a href="exit.php">
             <img src="imgs/exit.png" width="50" heigth="50">
         </a>
     </div>
 
+    <center><h1>Selecione um item no menu acima!</h1></center>
+
     <div id="content" style="width: 960px; margin: auto; border: solid #000 1px; height: 600px;">
-        <h1>Selecione um item no menu acima!</h1>
+        
         <div id></div>
     </div>
 </body>
