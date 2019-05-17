@@ -1,9 +1,9 @@
-<?php 
-    session_start();
+<?php
+session_start();
 
-    if(empty($_SESSION['usuario'])) {
-        header("Location: index.php");
-    }
+if (empty($_SESSION['usuario'])) {
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +24,9 @@
 
 <body>
     <div id="menu" style="width: 960px; margin: auto; heigth: 55px; text-align:center">
-        <p>Olá <?php $_SESSION['usuario']?></p>
+        <?php
+        echo "<p>Seja Bem vindo " . $_SESSION["usuario"]["nome"] . "</p>";
+        ?>
 
         <a href="?action=users">
             <img src="imgs/users.png" width="50" heigth="50">
@@ -39,11 +41,26 @@
         </a>
     </div>
 
-    <center><h1>Selecione um item no menu acima!</h1></center>
+    <div id="content" style="width: 960px; margin: auto; border: solid #000 1px; height: 600px; text-align:center">
 
-    <div id="content" style="width: 960px; margin: auto; border: solid #000 1px; height: 600px;">
-        
-        <div id></div>
+        <?php
+        if (isset($_GET["action"])) {
+            switch ($_GET["action"]) {
+                case "contacts":
+                    $incluir = 'contacts.php';
+                    break;
+                case "phones":
+                    $incluir = 'phones.php';
+                    break;
+                default:
+                    $incluir = 'empty.php';
+                    break;
+            }
+            include "$incluir";
+        } else {
+            echo "<h1>Selecione um Item no Menu Acima!</h1>";
+        }
+        ?>
     </div>
 </body>
 
