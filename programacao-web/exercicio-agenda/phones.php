@@ -1,11 +1,13 @@
 <?php
 $id = $_GET["id"];
+$nome = $_GET["nome"];
 ?>
 <h1>Insira os Telefones para o Contato Selecionado</h1>
-<h2>Contato: <?php echo $_GET["nome"]; ?></h2>
+<h2>Contato: <?php echo $nome; ?></h2>
 
 <form method="post" action="savePhones.php">
-    <input type="hidden" name="id_contato" value="<?php echo $id; ?>">
+	<input type="hidden" name="id_contato" value="<?php echo $id; ?>">
+	<input type="hidden" name="nome" value="<?php echo $nome; ?>">
     <table align="center">
         <tr>
             <td>Telefone</td>
@@ -31,10 +33,7 @@ while ($registros = mysqli_fetch_array($lista)) {
 
 	echo "<td align='center'>";
 
-	// echo '<a href="editContact.php?id=' . $registros["id"] . '">
-	// <img src="imgs/edit.png" width="16" heigth="16" border="0"></a>';
-
-	echo '<a href="removePhone.php?id=' . $registros["id"] . '">
+	echo '<a href="removePhone.php?id=' . $registros["id"] . '&nome='. $nome .'">
 	<img src="imgs/remove.png" width="16" heigth="16" border="0"></a>';
 
 	echo "</td>";

@@ -1,6 +1,7 @@
 <center>
 	<h1>Cadastro de Contatos</h1>
-	<form method="post" action="saveContacts.php">
+	<form method="post" action="saveContacts.php?action=insert">
+		<input type="hidden" name="id" value="0">
 		<table>
 			<tr>
 				<td>Nome</td>
@@ -28,7 +29,7 @@ while ($registros = mysqli_fetch_array($lista)) {
 
 	echo "<td align='center'>";
 
-	echo '<a href="editContact.php?id=' . $registros["id"] . '">
+	echo '<a href="?action=editContacts&id=' . $registros["id"] . '&nome='. $registros["nome"] .'">
 	<img src="imgs/edit.png" width="16" heigth="16" border="0"></a>';
 
 	echo '<a href="removeContact.php?id=' . $registros["id"] . '">

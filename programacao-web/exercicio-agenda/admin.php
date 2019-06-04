@@ -52,6 +52,9 @@ if (empty($_SESSION['usuario'])) {
                 case "phones":
                     $incluir = 'phones.php';
                     break;
+                case "editContacts":
+                    $incluir = 'editContacts.php';
+                    break;
                 default:
                     $incluir = 'empty.php';
                     break;
