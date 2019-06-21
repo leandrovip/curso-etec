@@ -3,28 +3,26 @@ session_start();
 $email = $_POST["email"];
 $senha = $_POST["password"];
 
-// Faz conexão com banco de dados
+//Fazemos a conexão com o Banco de dados
 include("conexao.php");
-
-// Verificar se existe usuário cadastrado
-$buscarUsuariosCadastrados = mysqli_query($link, "select * from tb_usuarios limit 1");
-
-// Verfica a quantidade de registros
-$quantidadeDeRegistros = mysqli_num_rows($buscaUsuariosCadastrados);
-if ($quantidadeDeRegistros < 1) {
-    // Inserir usuário padrão
-    $inserirUsuario = mysqli_query($link, "insert into tb_usuarios VALUES (null, 'Administrador', 'admin@etec.com.br', '1234')");
+//verificar se existe algum usuário cadastrado
+$verificausuario = mysqli_query($link,"select * from tb_usuarios limit 1");
+//Conto quantos registros a consulta acima retornou
+if (mysqli_num_rows($verificausuario) == 0){
+  //Inserimos um usuário no Banco de Dados :) 
+   $inserirUser = mysqli_query($link,"insert into tb_usuarios 
+   VALUES (null,'Administrador', 'admin@etec.com', '123')");
 }
 
-$validaLogin = mysqli_query($link, "select * from tb_usuarios where email = '$email' and senha = '$senha'");
-if (mysqli_num_rows($validaLogin) == 0)
-{
-    echo "Usuário ou senha inválidos!";
-    include("index.php");
-} else {
-    // Grava os dados do usuário na sessão
-    $_SESSION["usuario"] = mysqli_fetch_array($validaLogin);
+$validalogin = mysqli_query($link,"select * from tb_usuarios
+where email = '$email' and senha = '$senha'");
 
-    // Redireciona para a página admin.php
-    header("Location: admin.php");
+if (mysqli_num_rows($validalogin) == 0){
+  echo "Usuário ou senha inválidos!";
+  include("index.php");
+}else{
+   //Gravo os dados do usuário na sessão
+   $_SESSION["usuario"] = mysqli_fetch_array($validalogin);
+   //Redireciono para a Pagina admin.php
+   header("Location:admin.php");
 }

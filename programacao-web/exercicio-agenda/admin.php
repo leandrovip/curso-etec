@@ -28,12 +28,12 @@ if (empty($_SESSION['usuario'])) {
         echo "<p>Seja Bem vindo " . $_SESSION["usuario"]["nome"] . "</p>";
         ?>
 
-        <a href="?action=users">
-            <img src="imgs/users.png" width="50" heigth="50">
-        </a>
-
         <a href="?action=contacts">
             <img src="imgs/book.png" width="50" heigth="50">
+        </a>
+
+        <a href="?action=search">
+            <img src="imgs/search.png" width="50" heigth="50">
         </a>
 
         <a href="exit.php">
@@ -54,6 +54,9 @@ if (empty($_SESSION['usuario'])) {
                     break;
                 case "editContacts":
                     $incluir = 'editContacts.php';
+                    break;
+                case "search":
+                    $incluir = 'search.php';
                     break;
                 default:
                     $incluir = 'empty.php';
