@@ -1,0 +1,32 @@
+-- BANCO
+CREATE DATABASE CadastroProduto
+
+use CadastroProduto
+
+-- TABELA
+CREATE TABLE Produto (
+Id int Identity(1,1) primary key
+,Codigo varchar(20)
+,Descricao varchar(50)
+,Medida varchar(2)
+,ValorCusto decimal(18,2)
+,ValorVenda decimal(18,2)
+,Estoque decimal(18,2)
+,Observacao varchar(100)
+)
+
+-- PROCEDURE
+CREATE PROCEDURE sp_inserirproduto
+  @Codigo varchar(20)
+, @Descricao varchar(50)
+, @Medida varchar(2)
+, @ValorCusto decimal(18,2)
+, @ValorVenda decimal(18,2)
+, @Estoque decimal(18,2)
+, @Observacao varchar(100)
+AS
+BEGIN
+	INSERT INTO Produto (Codigo, Descricao, Medida, ValorCusto, ValorVenda, Estoque, Observacao)
+		VALUES (@Codigo, @Descricao, @Medida, @ValorCusto, @ValorVenda, @Estoque, @Observacao)
+END
+GO
