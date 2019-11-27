@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Linq;
 using System.Windows.Forms;
 
 namespace CadastroDeProduto
@@ -20,6 +21,22 @@ namespace CadastroDeProduto
         {
             using (var form = new frmCadastro())
                 form.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+            var observer = Observable.Interval(TimeSpan.FromSeconds(5))
+                    .Do((x) => Teste());
+
+            observer.Subscribe((x) =>
+            {
+                Console.WriteLine($"teste {x}");
+            });
+        }
+
+        private void Teste()
+        {
+            MessageBox.Show(DateTime.Now.ToString());
         }
     }
 }

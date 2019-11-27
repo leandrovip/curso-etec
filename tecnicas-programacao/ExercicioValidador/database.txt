@@ -1,0 +1,23 @@
+CREATE DATABASE Validador
+GO
+
+USE Validador;
+
+-- table
+CREATE TABLE Registros
+(Id Integer IDENTITY(1,1) PRIMARY KEY
+,ValorVerificado varchar(20)
+,Valido bit
+,Mensagem varchar(50))
+
+-- procedure
+CREATE PROCEDURE sp_InserirRegistro
+  @Valor varchar(20)
+, @Valido bit
+, @Mensagem varchar(50)
+AS
+BEGIN
+	INSERT INTO Registros (ValorVerificado, Valido, Mensagem)
+		VALUES (@Valor, @Valido, @Mensagem)
+END
+GO

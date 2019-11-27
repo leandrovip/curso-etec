@@ -1,0 +1,25 @@
+--CREATE DATABASE CadastroProdutos
+--GO
+--USE CadastroProdutos
+--GO
+
+-- Tabela
+CREATE TABLE Produto (
+  CodigoInterno integer IDENTITY(1,1) PRIMARY KEY
+, CodigoBarras varchar(20)
+, Descricao varchar(100)
+, ValorCusto decimal(18,2)
+, ValorVenda decimal (18,2))
+
+-- PROCEDURE
+CREATE PROCEDURE sp_inserirproduto
+  @Codigo varchar(20)
+, @Descricao varchar(50)
+, @ValorCusto decimal(18,2)
+, @ValorVenda decimal(18,2)
+AS
+BEGIN
+	INSERT INTO Produto (CodigoBarras, Descricao, ValorCusto, ValorVenda)
+		VALUES (@Codigo, @Descricao, @ValorCusto, @ValorVenda)
+END
+GO

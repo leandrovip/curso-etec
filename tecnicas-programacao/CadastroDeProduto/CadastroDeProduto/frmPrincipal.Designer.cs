@@ -74,6 +74,7 @@
             this.Name = "frmPrincipal";
             this.Text = "Tela Principal - Cadastro de Produtos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);
