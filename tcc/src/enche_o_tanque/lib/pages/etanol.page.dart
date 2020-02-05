@@ -24,7 +24,7 @@ class EtanolPage extends StatelessWidget {
               ),
               Container(
                 color: Colors.white,
-                height: 350,
+                height: 630,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -67,12 +67,12 @@ class EtanolPage extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 40,
                     ),
                     Container(
                       color: Colors.white,
-                      height: 150,
-                      width: 280,
+                      height: 320,
+                      width: 400,
                       child: ListView(
                         children: <Widget>[
                           ListTile(
@@ -103,7 +103,7 @@ class EtanolPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 40,
               ),
               Text(
                 "P U B L I C I D A D E",

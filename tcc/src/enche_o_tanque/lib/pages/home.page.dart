@@ -21,14 +21,14 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               SizedBox(
                 child: Image.asset('assets/images/logo-eot-2.png'),
-                width: 70,
-                height: 70,
+                width: 160,
+                height: 160,
               ),
               SizedBox(
-                height: 20,
+                height: 60,
               ),
               Container(
-                height: 35,
+                height: 65,
                 color: Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 55,
               ),
               Container(
                 height: 70,
@@ -208,10 +208,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 50,
               ),
               Container(
-                height: 60,
+                height: 90,
                 color: Colors.white,
                 child: Center(
                   child: Text(
